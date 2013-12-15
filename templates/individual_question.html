@@ -1,0 +1,71 @@
+{% extends "base_course.html" %}
+{% block course_body %}
+<div class = "row-fluid" style="margin-bottom:20px">
+	<div class = "span1">
+		<div style = "width:60px" class="pull-left">
+			<a {{vote_up | safe}}>
+				<div class="vote-icon upvote-icon"></div>
+			</a>
+			<div class="vote-score">
+				{{ score}}
+			</div>
+			<a {{vote_down | safe}}>
+				<div class="vote-icon downvote-icon"></div>
+			</a>
+		</div>
+	</div>	
+	<div class = "span11">		
+		<div>
+			<p class="question-title hidden-phone">{{ question_title }}</p>	
+			<p class="question-title-mobile visible-phone">{{ question_title }}</p>			
+		</div>
+		<ul class="pager pull-left" style="margin:2px">{{tag_block | safe}}</ul>
+		
+		<br>
+		<br>
+		<p class="question-body"> {{ question_body |safe }} </p>	
+		<br>
+		<h6>{{edit_link | safe}}</h6>
+		{{ vote_alert |safe }}
+		<div class="pull-right" >
+			<p style="color:#999">Asked by <a href="/course/{{course.name}}/profile/{{user_id}}">{{user_who_asked}}</a> {{question_time}}</p>
+						
+		</div>
+		
+
+					
+	</div>
+</div>
+<div>
+	<div class="page-header row-fluid">
+		<h2>Current Answers<small> Scroll down to answer this question</small></h2>
+	</div>
+	<div class="row-fluid">
+		{{ answer_block | safe}}
+	</div>
+	
+	<div class="row-fluid" id = "AnswerForm">
+		<form class = "well form-inline" method = "post">
+			<h3>Answer this question yourself</h3>
+			<br>
+			<label>Use the following latex code to improve your post:</label>
+			<br>
+			<label>Display equation: </label>
+			<code> $$ ... $$ </code> or <code> \[ ... \] </code>(replace ... with your equation)
+			<br>
+			<label>Inline equation: </label>
+			<code> \( ... \) </code>(replace ... with your equation)
+			<br>			
+			{{bad_answer_alert | safe}}
+			<textarea name = "answer_text" class="row-fluid"  style="height:200px">{{answer}}</textarea> 
+			<br> <br>
+			<input class = "btn" type = "submit" name = "Submit" value = "Submit">	
+			<input class = "btn btn-info" type = "submit" name = "Preview" value = "Preview">	
+		</form>
+		{{ preview_msg |safe }}
+	</div>		
+</div>
+
+	
+
+{% endblock %}

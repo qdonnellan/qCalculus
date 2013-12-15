@@ -1,0 +1,37 @@
+{% extends "base_course.html" %}
+
+{% block course_body %}
+
+<div class="page-header row-fluid">
+	<h2>Ribbons<small> earn these in the classroom and discussion board</small></h2>
+</div>
+<table class="table">
+	<thead>
+		<tr>
+			<th style="width:130px">Ribbon</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{html_to_print |safe}}	
+	</tbody>	
+<table>
+
+<div class="page-header row-fluid">
+	<h2>Ribbon Honors<small> when you recieve the same ribbon multiple times</small></h2>
+</div>
+<table class="table">
+	<thead>
+		<tr>
+			<th style="width:130px">Honor Bar</th>
+			<th>How to earn</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{honor_badges |safe}}	
+	</tbody>	
+<table>
+
+
+
+{% endblock %}

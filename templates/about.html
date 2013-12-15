@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block body %}
+
+
+<div class="row-fluid">
+<div class="page-header" id="#latex">
+	<h2>Latex <small> displaying equations on the discussion board</small> </h2>
+</div>
+
+	<p>Latex is a markup language which provides for us a simple and robust method for displaying equations. (Latex is actually quite bigger than just mathematical markup and is used all over the world to produce professional quality reports, papers, articles, and journals. You can learn much of what you need to know about latex here: <a href="http://tobi.oetiker.ch/lshort/lshort.pdf">The Not so Short Introduction to Latex</a>)
+	</p>
+
+<h3>Inline equations</h3>
+<p>To include an equation inline with your text on this website, simply surround your equation with <code>\(</code> on the left and <code>\)</code> on the right. The normal text f(x)=2x+3 when surrounded by this markup becomes \( f(x)=2x+3\) which obviously looks better. The code for that equation would therefore be: <pre>\( f(x)=2x+3 \)</pre></p>
+
+<h3>Display equations</h3>
+<p>Sometimes you may wish to give an equation more breathing room, to do that simple wrap it in <code>\[</code> and <code>\]</code>, or double-dollar signs <code>$$ ... $$</code>  replacing ... with your equation. A display equation is set on its own line, so its not crowded with text. The markup <pre>$$ f(x)=2x+3 $$</pre> will produce the following $$ f(x) = 2x+3 $$ which is set apart from the rest of the text on the page. Of course <code>\[ f(x)=2x+3 \]</code> will produce the same output</p>
+
+<h3>Where to learn Latex math</h3>
+<p>Whenever you see an equation someone has typed on this website, right click on that equation and select <b>Show Math As > TeX Commans</b> and a popup window will display the Latex code used to produce that equation. </p>
+
+<p>Alternately, you can learn all the math symbols at the Latex math wiki site <a href="http://en.wikibooks.org/wiki/LaTeX/Mathematics">located here</a>
+
+
+
+
+
+
+{% endblock %}
+

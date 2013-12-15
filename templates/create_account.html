@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body %}
+	
+<form method = "post">
+	{{errors | safe}}
+	<label><h2>First Name</h2></label>
+	<input type = "text" name = "firstname" value = "{{firstname}}">
+	<label><h2>Last Name</h2></label>
+	<input type = "text" name = "lastname" value = "{{lastname}}">
+	<label><h2>Choose a Nickname</h2></label>
+	<label>
+		Your nickname should be between 9 and 20 characters,<br>
+		It may contain lowecase and uppercase letters, numbers, <br>
+		and the underscore and hyphen symbols ( _ and - ) <br>
+		<br>		
+	</label>
+	<input type = "text" name = "username" value = "">
+	<br>
+	<button type="submit" class="btn">Submit</button>	
+</form>
+	
+
+{% endblock %}

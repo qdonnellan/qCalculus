@@ -1,0 +1,20 @@
+{% extends "base_course.html" %}
+
+{% block course_body %}
+
+<div class="page-header">
+	<h2>Add Mentor<small> your mentor will be able to track your progress in {{course.name.upper()}}</small></h2>
+</div>
+
+<form class = "form-inline well" method = "post">		
+		<label><h2>Enter Mentor ID</h2></label> <br>
+		<label>Your mentor should have given you their mentor id, enter it here. If you have not recieved a mentor id from them, ask them for one
+			Your mentor will have to approve your request before you officially become their mentee.</label>
+		<input type = "text" name = "mentor_id" value = "{{mentor_id}}"> <code>MENTOR ID</code>
+		<br>
+		<label style="color:red">{{mentor_error}}</label>
+		<br> <br>
+		<input class = "btn btn-primary" type = "submit" name = "Submit" value = "Request Mentorship">		
+	</form>
+
+{% endblock %}

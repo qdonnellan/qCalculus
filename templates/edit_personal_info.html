@@ -1,0 +1,19 @@
+{% extends "base_course.html" %}
+
+{% block course_body %}
+
+
+<form class = "form-inline well" method = "post">		
+		<label><h2>Edit Personal Information</h2></label> <br>	
+		<label style="color:red">{{error}}</label><br>	
+		<input type = "text" name = "first_name" value = "{{personal_info.first_name}}"> <code>First name</code>
+		<br><br>
+		<input type = "text" name = "last_name" value = "{{personal_info.last_name}}"> <code>Last name</code>
+		<br><br>
+		<input type = "text" name = "nickname" value = "{{personal_info.nickname}}"> <code>nickname</code>
+		
+		<br> <br>
+		<input class = "btn btn-primary" type = "submit" name = "Submit" value = "Save changes"> Navigate away from this page to discard changes		
+	</form>
+
+{% endblock %}

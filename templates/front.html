@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block body %}
+
+
+<div class="row-fluid span12">
+{{ errors | safe }}
+	<div class="hero-unit hidden-phone">
+		<h1>qCalculus</h1>
+		<br>
+		<p>Calculus instruction for the beginning calculus student</p>
+	</div>
+	<div class="well visible-phone">
+		<h1>qCalculus</h1>
+		<br>
+		<p>Calculus instruction for the beginning calculus student</p>
+	</div>
+	<div class="container-fluid">
+		<div class="page-header row-fluid">
+			<h2>Introductory Calculus<small> Calculus courses for the first year student</small></h2>
+		</div>
+		<div class="row-fluid">
+			<ul class="thumbnails">
+				<li class="span3">
+					<div class="thumbnail">
+						<img src="/images/cal101pic.png"  class="hidden-phone" alt="">
+						<h5>CAL101 - Foundations</h5>
+						<p>Learn the basics of limits, differentiation, and integration</p>
+						<a class="btn btn-primary btn-small {{active_enroll}}" href={{enroll.cal101link}}>{{enroll.cal101msg}}</a>
+						<a class="btn btn-small" href = "/course/cal101/info">More Info</a>
+					</div>
+				</li>
+				<li class="span3">
+					<div class="thumbnail">
+						<img src="/images/cal102pic.png" class="hidden-phone" alt="">
+						<h5>CAL102 - Early Applications</h5>
+						<p>Coming October 2012</p>						
+						<a class="btn btn-small disabled">Coming soon</a>
+					</div>
+				</li>
+				<li class="span3">
+					<div class="thumbnail">
+						<img src="/images/cal103pic.png" class="hidden-phone" alt="">
+						<h5>CAL103 - Techniques </h5>
+						<p>Coming November 2012</p>
+						<a class="btn btn-small disabled">Coming soon</a>
+					</div>
+				</li>
+				<li class="span3">
+					<div class="thumbnail">
+						<img src="/images/cal104pic.png" class="hidden-phone" alt="">
+						<h5>CAL104 - Advanced Applications</h5>
+						<p>Coming January 2013</p>
+						<a class="btn btn-small disabled">Coming soon</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+{% endblock %}

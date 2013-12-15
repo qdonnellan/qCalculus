@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block body %}
+
+
+<div class="row-fluid span12">
+	<h1>{{course.title}}</h1>
+	<h6>If you are ready to enroll in this course, click enroll!</h6> 
+	<br>
+	<form class="form" method = "post">
+	<input class = "btn btn-primary btn-large" type="submit" value="Enroll" name="submit">
+	</form>
+	
+
+</div>
+
+
+
+{% endblock %}

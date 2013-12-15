@@ -1,0 +1,46 @@
+{% extends "base_course.html" %}
+{% block course_body %}
+<div class=" well" style="margin-bottom:-1px">
+	<h1>{{ nickname }} Profile</h1>
+	<h2 style="color:#999">{{course.title}}</h2>	
+</div>
+<div>
+	<div class="tabs-below" id="profile-tabs" >	
+		<ul class="nav nav-tabs" >
+			<li class="{{decor.stats}}">
+				<a href="/course/{{course.name}}/profile/{{user_id}}?tab=stats">Stats</a>
+			</li>			
+			<li class="{{decor.quizzes}} {{quiz_tab_visible}}">
+				<a href="/course/{{course.name}}/profile/{{user_id}}?tab=quizzes&press=just_then&sort_method={{sort_method}}&{{additional_query}}">Quizzes</a>
+			</li>
+			<li class="{{decor.questions}}">
+				<a href="/course/{{course.name}}/profile/{{user_id}}?tab=questions&press=just_then&sort_method={{sort_method}}&{{additional_query}}">Questions</a>
+			</li>
+			<li class="{{decor.answers}}">
+				<a href="/course/{{course.name}}/profile/{{user_id}}?tab=answers&press=just_then&sort_method={{sort_method}}&{{additional_query}}">Answers</a>
+			</li>
+			<li class="{{decor.votes}}">
+				<a href="/course/{{course.name}}/profile/{{user_id}}?tab=votes">Votes</a>
+			</li>
+			<li class="{{decor.mentor}} {{mentor_tab_visible}}">
+				<a href="/course/{{course.name}}/profile/{{user_id}}?tab=mentor">Mentor</a>
+			</li>
+			
+		</ul>		
+	</div>
+	{{sort_tabs | safe }}
+	<div>
+		<table class="table">
+			<tbody>
+				{{ html_to_print | safe }}
+			</tbody>
+		</table>			
+	</div>
+
+
+	
+	{{footer |safe}}
+</div>
+{% endblock %}
+
+

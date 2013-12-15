@@ -1,0 +1,24 @@
+{% extends "base_course.html" %}
+{% block course_body %}
+<div class="span11" id = "AnswerForm">
+	<form class = "well form-inline" method = "post">
+		{{ alert_msg |safe }}
+		<h3>Edit your answer</h3>
+		<br>
+		<label>Use the following latex code to improve your post:</label>
+		<br>
+		<label>Display equation: </label>
+		<code> $$ ... $$ </code> or <code> \[ ... \] </code>(replace ... with your equation)
+		<br>
+		<label>Inline equation: </label>
+		<code> \( ... \) </code>(replace ... with your equation)
+		<br>			
+		{{bad_answer_alert | safe}}
+		<textarea name = "answer_text" class="row-fluid"  style="height:200px">{{answer_text}}</textarea> 
+		<br>
+		<input class = "btn" type = "submit" name = "Submit" value = "Submit">	
+		<input class = "btn btn-info" type = "submit" name = "Preview" value = "Preview">	
+	</form>
+	{{ preview_msg |safe }}
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block body %}
+<header>
+	<div class="subnav">		
+		<ul class="nav nav-pills">	
+			<li class="{{course_home_active}} course-title-pill">
+				<a href="/course/{{course.name}}">{{course.title}}</a>
+			</li>
+			<li class="{{lessons_active}}">
+				<a href="/course/{{course.name}}/lessons">Lessons</a>
+			</li>
+			<li class="{{notes_active}}">
+				<a href="/course/{{course.name}}/notes">Notes</a>
+			</li>		
+			<li class="{{discussion_active}}">
+				<a href="/course/{{course.name}}/discussion">Discussion</a>
+			</li>
+			<li class="{{syllabus_active}}">
+				<a href="/course/{{course.name}}/syllabus">Syllabus</a>
+			</li>
+			<li class="{{profile_active}}">
+				<a href="/course/{{course.name}}/profile">Profile</a>
+			</li>
+		</ul>
+	</div>
+</header>
+<br>
+		
+<div class="row-fluid">
+	{% block course_body %} {% endblock %}
+</div>		
+
+
+
+
+{% endblock %}

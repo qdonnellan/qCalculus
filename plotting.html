@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			window.onload = function() {
+		        var canvas = document.getElementById("myCanvas");
+		        var context = canvas.getContext("2d");
+
+				context.lineWidth = 1;
+
+				var fromX = 50;
+				var fromY = 50;
+				var toX   = 300;
+				var toY   = 50;
+				var cp1X   = 100;
+				var cp1Y   = 10;
+				var cp2X   = 250;
+				var cp2Y   = 100;
+
+				context.beginPath();
+				context.moveTo(fromX, fromY);
+				context.bezierCurveTo(cp1X, cp1Y, cp2X, cp2Y, toX, toY);
+				context.stroke();
+				context.closePath();
+			};
+		</script>
+	</head>
+
+	<body>
+		<canvas id="myCanvas" width="165" height="145"></canvas>
+	</body>
+
+</html>

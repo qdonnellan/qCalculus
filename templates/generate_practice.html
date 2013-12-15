@@ -1,0 +1,14 @@
+{% extends "base_course.html" %}
+{% block course_body %}
+
+{{error_alert | safe}}
+
+{{ html_to_print | safe}}
+
+<form method = "post">
+	{{ form_text  | safe}}
+	<input type = "Submit" name = "Generate Test" class = "btn btn-primary" value = "Generate Test">
+</form>
+
+
+{% endblock %}

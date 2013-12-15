@@ -1,0 +1,56 @@
+{% extends "base_course.html" %}
+{% block course_body %}
+	<form class = "form-inline well" method = "post">
+		{{ alert_msg |safe }}
+		<label><h2>Title</h2></label> <br>
+		<label>You may use inline equations in your title. <code> \( ... \) </code>(replace ... with your equation)</label> 
+			<a class="btn btn-mini btn-inverse pull-right" href="/about#latex" target="_blank">learn about latex</a>
+		<input type = "text" name = "question_header" value = "{{question_header}}" class="row-fluid">
+		<span class = "help-block">Please write a descriptive title</span>
+
+
+		<label><h2>Question Text</h2></label>	
+		<br>	
+		<label>Use the following latex code to improve your post:</label>	
+		<br>		
+		<label>Display equation: </label>
+		<code> $$ ... $$ </code> or <code> \[ ... \] </code>(replace ... with your equation)
+		<br>
+		<label>Inline equation: </label>
+		<code> \( ... \) </code>(replace ... with your equation)
+		<a class="btn btn-mini btn-inverse pull-right" href="/about#latex" target="_blank">learn about latex</a>
+		<br>
+		
+		<textarea name = "question_text" class="row-fluid" rows = "10">{{question_text}}</textarea>	
+		<br> <br>
+		<div class="row-fluid">
+			<div class="span4">
+				<h2>Tags</h2>
+				<input type="text" class="row-fluid" name="tag#1" placeholder="first tag" value="{{tags[0]}}">
+				<input type="text" class="row-fluid" name="tag#2" placeholder="second tag" value="{{tags[1]}}">
+				<input type="text" class="row-fluid" name="tag#3" placeholder="third tag" value="{{tags[2]}}">
+				<input type="text" class="row-fluid" name="tag#4" placeholder="fourth tag" value="{{tags[3]}}">
+				<input type="text" class="row-fluid" name="tag#5" placeholder="fifth tag" value="{{tags[4]}}">
+			</div>
+			<div class="span8">
+				<h3>About tags</h3>
+					<p>
+						Tags help other users see quickly what 'topics' your question is about. They also provide a very quick method for 
+						sorting through questions about a similar topic. You may use a letter, numbers, or hyphen - in your tag, and it must be between 3 and 30 characters long. 
+					</p>
+				<h3>Recent tags<small> just some examples to help you out...</small></h3>
+				{{recent_tag_block |safe}}
+			</div>
+		</div>
+			
+		<br> <br>
+
+		<input class = "btn" type = "submit" name = "Submit" value = "Submit">
+		<input class = "btn btn-info" type = "submit" name = "Preview" value = "Preview">			
+	</form>
+	{{ preview_msg |safe }}
+
+
+
+
+{% endblock %}

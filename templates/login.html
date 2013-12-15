@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block body %}
+{{errors |safe}}
+<div class="row-fluid">
+	<div class = "span6">
+		<h1>First time users</h1>
+		<br>
+		<p>Don't have an account? You'll need to sign in with your Google Account. 
+		If you don't have a Google Account, you'll be prompted to create one.
+		I am using Google Accounts to log in simply because I trust the experts at Google more than I trust myself to handle authentication; 
+		(you should too, remember: I'm a high school math teacher, not a web application expert). Click "Create account" to get started.
+		</p>
+		<br>
+		<div>
+			<a class="btn btn-large btn-primary" href="/login/create">Create account</a>
+		</div>		
+		<br> <br>
+	</div>		
+	
+	<div class = "span6">
+		<h1>Existing users</h1>
+		<br>
+		<p>Already have an account? Log back in! Your browser will automatically detect if you are logged in to Google, if you aren't you'll be prompted to log back in.
+		Once you've logged back into Google you'll be redirected to your profile
+		</p>	
+		
+		<br>
+		<div>
+			<a class="btn btn-large btn-primary" href="/login/existing">Log in with Google</a>
+		</div>
+			
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block body %}
+
+<div class="row-fluid span12">
+{{ errors | safe }}
+	<div class="hero-unit hidden-phone">
+		<h1>{{course.title}}</h1>
+		<br>
+		<p>{{course.description}}</p>		
+		<a class="btn btn-large btn-primary" href="/course/{{course.name}}/enroll">Enroll now</a>
+	</div>
+	<div class="well visible-phone">
+		<h1>{{course.title}}</h1>
+		<br>
+		<p>{{course.description}}</p>
+		<a class="btn btn-primary" href="/course/{{course.name}}/enroll">Enroll now</a>
+	</div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+    	<meta name="author" content="">
+		<script type="text/javascript"
+			src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		<link href='http://fonts.googleapis.com/css?family=Lustria' rel='stylesheet' type='text/css'>
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-34206100-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+		
+	</head>
+
+	<body style = "font-family: 'Lustria', serif; font-size:11pt; width:8in;">
+		<h3>This test was generated at qCalculus</h3>
+		<div>
+			<div style="width:8in; display:block">
+				{{ html_to_print | safe}}
+			</div>				
+			<div style="width:8in; float:left; display:none">
+				<h3 style="width:8in"> Answer Key</h3>
+				<p>		
+				{{ answer_bank | safe}}
+				</p>
+			</div>		
+		</div>
+	</body>
+</html>
